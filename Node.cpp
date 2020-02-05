@@ -24,5 +24,5 @@ std::map<Node, double>* Node::getEdges() {
 }
 
 void Node::addEdge(Node neighbour, double weight) {
-	edges->at(neighbour) = weight;
+	edges->insert(std::pair<Node, double>(neighbour, weight));
 }
