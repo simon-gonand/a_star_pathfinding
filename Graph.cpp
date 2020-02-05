@@ -3,7 +3,6 @@
 
 Graph::Graph(){
 	nodeList = new std::vector<Node>();
-	edgeList = new std::vector<Edge>();
 }
 
 Graph::~Graph(){}
@@ -21,7 +20,7 @@ std::vector<Node> Graph::searchPath(Node start, Node goal) {
 
 	while (path.back().getId() != goal.getId()) {
 		for (unsigned i = 0; i < path.back().getEdges()->size(); ++i) {
-			double new_cost = cost[path.back()] + 
+			double new_cost = cost[path.back()];
 		}
 	}
 }
