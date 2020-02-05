@@ -7,16 +7,11 @@ int main() {
 	Parser* p = new Parser(str);
 	Graph g = p->loadFile();
 
-	std::cout << "---------------- ALL NEIGHBOURS ----------------" << std::endl;
-	for (unsigned i = 0; i < g.getNodeList()->size(); ++i) {
-		std::cout << "NODE " << g.getNodeList()->at(i).getId() << ": ";
-		for (std::map<Node, double>::iterator iter(g.getNodeList()->at(i).getEdges()->begin());
-			iter != g.getNodeList()->at(i).getEdges()->end();
-			++iter) {
-			std::cout << iter->first.getId() << " weight : " << iter->second << std::endl;
-		}
-		std::cout << std::endl;
-	}
+	std::vector<Node> path = g.searchPath(g.getNodeList()->at(0), g.getNodeList()->at(60));
+
+	for (unsigned i = 0; i < path.size(); ++i)
+		std::cout << "Pass through: " << path[i].getId() << std::endl;
+
 
 	delete p;
 
