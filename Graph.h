@@ -7,6 +7,8 @@
 class Graph {
 private:
 	std::vector<Node>* nodeList;
+	int heuristicCalculation(Node n, Node goal);
+	std::vector<Node> insertionSortPriority(std::vector<Node> vec, Node goal);
 
 public:
 	Graph();
