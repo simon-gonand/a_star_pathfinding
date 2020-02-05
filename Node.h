@@ -12,6 +12,7 @@ private:
 public:
 	Node(unsigned id, std::pair<int,int> coord);
 	~Node();
+	bool operator < (Node n2) const;
 	unsigned getId() const;
 	std::pair<int, int> getCoordinates();
 	std::map<Node, double>* getEdges();
