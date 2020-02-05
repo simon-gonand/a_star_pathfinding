@@ -3,7 +3,7 @@
 #include <map>
 
 int main() {
-	std::string str = "random64_4_1485816605.dot";
+	std::string str = "a_star_pathfinding/random64_4_1485816605.dot";
 	Parser* p = new Parser(str);
 	Graph g = p->loadFile();
 
